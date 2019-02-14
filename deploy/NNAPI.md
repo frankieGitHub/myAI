@@ -6,4 +6,4 @@ android9.0源码又在NNAPI之上放置了tensorflow lite（以下简称tflite�
 用户可以看到tflite提供的JAVA API和C++ API。
 整体软件框架如下：
 
-![tflite + NNAPI + vendor accelerate](https://github.com/frankieGitHub/myAI/tree/master/srcImg/AndroidNNAPI.png)
+![tflite + NNAPI + vendor accelerate](https://github.com/frankieGitHub/myAI/tree/master/srcImg/androidNNAPI.jpg)
