@@ -5,4 +5,4 @@ https://github.com/tensorflow/tfjs-examples
 
 如下的入门介绍，有个编辑器就可以开始tf.js编码了
 https://blog.csdn.net/aliceyangxi1987/article/details/80743590
-
+https://www.youtube.com/watch?v=Nc8kZABv-KE
