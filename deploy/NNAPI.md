@@ -23,6 +23,8 @@ android9.0源码又在NNAPI之上放置了tensorflow lite（以下简称tflite�
 网名：大缺弦，发布了个人作品：https://github.com/JDAI-CV/DNNLibrary
 这个作品的就是把onnx格式的模型，通过他自己的脚本转化为自己的格式，然后跑到了NNAPI之上。
 
+类似的描述连接：https://blog.csdn.net/zhaizu/article/details/79416625
+
 
 这里可以看到，如果你的设备有GPU/DSP，那么NNAPI不错的选择（当然，你的选择还有高通SNPE或小米MACE）;
 如果只有CPU，那么可以选择腾讯的NCNN库来部署模型。
