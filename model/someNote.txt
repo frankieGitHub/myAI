@@ -1,0 +1,23 @@
+1、训练的时候val数据集的作用？
+你要知道val是validation的简称。
+training dataset 和 validation dataset都是在训练的时候起作用。
+而因为validation的数据集和training没有交集，所以这部分数据对最终训练出的模型没有贡献。
+validation的主要作用是来验证是否过拟合、以及用来调节训练参数等。
+ 
+比如你训练0-10000次迭代过程中，train和validation的loss都是不断降低，
+但是从10000-20000过程中train loss不断降低， validation的loss不降反升。
+那么就证明继续训练下去，模型只是对training dataset这部分拟合的特别好，但是泛化能力很差。
+所以与其选取20000次的结果，不如选择10000次的结果。
+这个过程的名字叫做 Early Stop， validation数据在此过程中必不可少。
+ 
+如果你去跑caffe自带的训练demo，你会用到train_val.prototxt，这里面的val其实就是validation。
+而网络输入的TEST层，其实就是validation，而不是test。你可以通过观察validation的loss和train的loss定下你需要的模型。
+
+但是为什么现在很多人都不用validation了呢？
+我的理解是现在模型中防止过拟合的机制已经比较完善了，Dropout\BN等做的很好了。
+而且很多时候大家都用原来的模型进行fine tune，也比从头开始更难过拟合。
+所以大家一般都定一个训练迭代次数，直接取最后的模型来测试。
+
+
+
+
