@@ -1,0 +1,78 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+0	session.vim	/^normal! 0$/;"	m
+4NT_args	gradlew.bat	/^:4NT_args$/;"	l
+APP_BASE_NAME	gradlew.bat	/^set APP_BASE_NAME=%~n0$/;"	v
+APP_HOME	gradlew.bat	/^set APP_HOME=%DIRNAME%$/;"	v
+CLASSPATH	gradlew.bat	/^set CLASSPATH=%APP_HOME%\\gradle\\wrapper\\gradle-wrapper.jar$/;"	v
+CMD_LINE_ARGS	gradlew.bat	/^set CMD_LINE_ARGS=$/;"	v
+CMD_LINE_ARGS	gradlew.bat	/^set CMD_LINE_ARGS=%*$/;"	v
+CMD_LINE_ARGS	gradlew.bat	/^set CMD_LINE_ARGS=%\$$/;"	v
+Compute	app/src/main/cpp/simple_model.cpp	/^bool SimpleModel::Compute(float inputValue1, float inputValue2,$/;"	f	class:SimpleModel
+ComputeTask	app/src/main/java/com/example/android/nnapidemo/MainActivity.java	/^    private class ComputeTask extends AsyncTask<Float, Void, Float> {$/;"	c	class:MainActivity
+CreateCompiledModel	app/src/main/cpp/simple_model.cpp	/^bool SimpleModel::CreateCompiledModel() {$/;"	f	class:SimpleModel
+DEFAULT_JVM_OPTS	gradlew.bat	/^set DEFAULT_JVM_OPTS=$/;"	v
+DIRNAME	gradlew.bat	/^if "%DIRNAME%" == "" set DIRNAME=.$/;"	v
+DIRNAME	gradlew.bat	/^set DIRNAME=%~dp0$/;"	v
+FLOAT_EPISILON	app/src/main/cpp/simple_model.h	23;"	d
+InitModelTask	app/src/main/java/com/example/android/nnapidemo/MainActivity.java	/^    private class InitModelTask extends AsyncTask<String, Void, Long> {$/;"	c	class:MainActivity
+JAVA_EXE	gradlew.bat	/^set JAVA_EXE=%JAVA_HOME%\/bin\/java.exe$/;"	v
+JAVA_EXE	gradlew.bat	/^set JAVA_EXE=java.exe$/;"	v
+JAVA_HOME	gradlew.bat	/^set JAVA_HOME=%JAVA_HOME:"=%$/;"	v
+Java_com_example_android_nnapidemo_MainActivity_destroyModel	app/src/main/cpp/nn_sample.cpp	/^Java_com_example_android_nnapidemo_MainActivity_destroyModel($/;"	f
+Java_com_example_android_nnapidemo_MainActivity_initModel	app/src/main/cpp/nn_sample.cpp	/^Java_com_example_android_nnapidemo_MainActivity_initModel($/;"	f
+Java_com_example_android_nnapidemo_MainActivity_startCompute	app/src/main/cpp/nn_sample.cpp	/^Java_com_example_android_nnapidemo_MainActivity_startCompute($/;"	f
+LOG_TAG	app/src/main/cpp/simple_model.h	25;"	d
+LOG_TAG	app/src/main/java/com/example/android/nnapidemo/MainActivity.java	/^    private final String LOG_TAG = "NNAPI_DEMO";$/;"	f	class:MainActivity	file:
+MainActivity	app/src/main/java/com/example/android/nnapidemo/MainActivity.java	/^public class MainActivity extends Activity {$/;"	c
+NNAPI_SIMPLE_MODEL_H	app/src/main/cpp/simple_model.h	18;"	d
+SessionLoad	session.vim	/^let SessionLoad = 1$/;"	v
+SimpleModel	app/src/main/cpp/simple_model.cpp	/^SimpleModel::SimpleModel(size_t size, int protect, int fd, size_t offset) :$/;"	f	class:SimpleModel
+SimpleModel	app/src/main/cpp/simple_model.h	/^class SimpleModel {$/;"	c
+TENSOR_SIZE	app/src/main/cpp/simple_model.h	24;"	d
+_SKIP	gradlew.bat	/^set _SKIP=2$/;"	v
+com.example.android.nnapidemo	app/src/main/java/com/example/android/nnapidemo/MainActivity.java	/^package com.example.android.nnapidemo;$/;"	p
+compilation_	app/src/main/cpp/simple_model.h	/^    ANeuralNetworksCompilation *compilation_;$/;"	m	class:SimpleModel
+destroyModel	app/src/main/java/com/example/android/nnapidemo/MainActivity.java	/^    public native void destroyModel(long modelHandle);$/;"	m	class:MainActivity
+die	gradlew	/^die ( ) {$/;"	f
+dimLength_	app/src/main/cpp/simple_model.h	/^    uint32_t dimLength_;$/;"	m	class:SimpleModel
+doInBackground	app/src/main/java/com/example/android/nnapidemo/MainActivity.java	/^        protected Float doInBackground(Float... inputs) {$/;"	m	class:MainActivity.ComputeTask
+doInBackground	app/src/main/java/com/example/android/nnapidemo/MainActivity.java	/^        protected Long doInBackground(String... modelName) {$/;"	m	class:MainActivity.InitModelTask
+end	gradlew.bat	/^:end$/;"	l
+execute	gradlew.bat	/^:execute$/;"	l
+fail	gradlew.bat	/^:fail$/;"	l
+findJavaFromJavaHome	gradlew.bat	/^:findJavaFromJavaHome$/;"	l
+init	gradlew.bat	/^:init$/;"	l
+initModel	app/src/main/java/com/example/android/nnapidemo/MainActivity.java	/^    public native long initModel(AssetManager assetManager, String assetName);$/;"	m	class:MainActivity
+inputTensor1_	app/src/main/cpp/simple_model.h	/^    std::vector<float> inputTensor1_;$/;"	m	class:SimpleModel
+inputTensor2Fd_	app/src/main/cpp/simple_model.h	/^    int inputTensor2Fd_;$/;"	m	class:SimpleModel
+mainEnd	gradlew.bat	/^:mainEnd$/;"	l
+memoryInput2_	app/src/main/cpp/simple_model.h	/^    ANeuralNetworksMemory *memoryInput2_;$/;"	m	class:SimpleModel
+memoryModel_	app/src/main/cpp/simple_model.h	/^    ANeuralNetworksMemory *memoryModel_;$/;"	m	class:SimpleModel
+memoryOutput_	app/src/main/cpp/simple_model.h	/^    ANeuralNetworksMemory *memoryOutput_;$/;"	m	class:SimpleModel
+modelDataFd_	app/src/main/cpp/simple_model.h	/^    int modelDataFd_;$/;"	m	class:SimpleModel
+modelHandle	app/src/main/java/com/example/android/nnapidemo/MainActivity.java	/^    private long modelHandle = 0;$/;"	f	class:MainActivity	file:
+model_	app/src/main/cpp/simple_model.h	/^    ANeuralNetworksModel *model_;$/;"	m	class:SimpleModel
+offset_	app/src/main/cpp/simple_model.h	/^    size_t offset_;$/;"	m	class:SimpleModel
+omega	gradlew.bat	/^:omega$/;"	l
+onCreate	app/src/main/java/com/example/android/nnapidemo/MainActivity.java	/^    protected void onCreate(Bundle savedInstanceState) {$/;"	m	class:MainActivity
+onDestroy	app/src/main/java/com/example/android/nnapidemo/MainActivity.java	/^    protected void onDestroy() {$/;"	m	class:MainActivity
+onPostExecute	app/src/main/java/com/example/android/nnapidemo/MainActivity.java	/^        protected void onPostExecute(Float result) {$/;"	m	class:MainActivity.ComputeTask
+onPostExecute	app/src/main/java/com/example/android/nnapidemo/MainActivity.java	/^        protected void onPostExecute(Long result) {$/;"	m	class:MainActivity.InitModelTask
+outputTensorFd_	app/src/main/cpp/simple_model.h	/^    int outputTensorFd_;$/;"	m	class:SimpleModel
+s:l	session.vim	/^let s:l = 2 - ((1 * winheight(0) + 16) \/ 33)$/;"	v
+s:so_save	session.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	v
+s:sx	session.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	v
+s:wipebuf	session.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
+splitJvmOpts	gradlew	/^function splitJvmOpts() {$/;"	f
+startCompute	app/src/main/java/com/example/android/nnapidemo/MainActivity.java	/^    public native float startCompute(long modelHandle, float input1, float input2);$/;"	m	class:MainActivity
+tensorSize_	app/src/main/cpp/simple_model.h	/^    uint32_t tensorSize_;$/;"	m	class:SimpleModel
+warn	gradlew	/^warn ( ) {$/;"	f
+win9xME_args	gradlew.bat	/^:win9xME_args$/;"	l
+win9xME_args_slurp	gradlew.bat	/^:win9xME_args_slurp$/;"	l
+zt	session.vim	/^normal! zt$/;"	m
+~SimpleModel	app/src/main/cpp/simple_model.cpp	/^SimpleModel::~SimpleModel() {$/;"	f	class:SimpleModel
