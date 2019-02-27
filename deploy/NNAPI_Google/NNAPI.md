@@ -1,5 +1,3 @@
-test
-
 # NNAPI 介绍
 google在android8.1的源码中放入了NNAPI的框架代码，位置可以参考：
 http://androidxref.com/8.1.0_r33/xref/frameworks/ml/nn/
@@ -20,7 +18,7 @@ android9.0源码又在NNAPI之上放置了tensorflow lite（以下简称tflite�
 
 # NNAPI的复用
 看到这里，你会觉得这个NNAPI只能给tflite使用了？有人给了否定的答案。
-网名：大缺弦，发布了个人作品：https://github.com/JDAI-CV/DNNLibrary
+网名：（中科大---）大缺弦（京东），发布了个人作品：https://github.com/JDAI-CV/DNNLibrary
 这个作品的就是把onnx格式的模型，通过他自己的脚本转化为自己的格式，然后跑到了NNAPI之上。
 
 类似的描述连接：https://blog.csdn.net/zhaizu/article/details/79416625
@@ -29,4 +27,13 @@ android9.0源码又在NNAPI之上放置了tensorflow lite（以下简称tflite�
 这里可以看到，如果你的设备有GPU/DSP，那么NNAPI不错的选择（当然，你的选择还有高通SNPE或小米MACE）;
 如果只有CPU，那么可以选择腾讯的NCNN库来部署模型。
 
+# NNAPI的代码学习
+1、可以看看使用NNAPI的例子，就是本目录的例子。它其实是包含在android ndk example里的。学习其他的ndk开发，可以查看这个开源
+https://github.com/googlesamples/android-ndk
 
+https://github.com/googlesamples/android-ndk/tree/master/nn_sample
+
+2、大缺弦的https://github.com/JDAI-CV/DNNLibrary
+
+3、在NNAPI之上的tensorflow lite代码，（android代码或是github tensorflow的开源）
+http://androidxref.com/9.0.0_r3/xref/external/tensorflow/tensorflow/contrib/lite/
