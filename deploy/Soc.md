@@ -27,3 +27,4 @@ A40i产品亮点：
 apq -- ap only，区别于msm，msm是ap+bp
 apq一般作平板。
 
+## 树莓派
