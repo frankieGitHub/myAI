@@ -30,3 +30,6 @@ ICML 是 International Conference on Machine Learning的缩写，即国际机器
 国际人工智能联合会议（International Joint Conference on Artificial Intelligence, 简称为IJCAI）是人工智能领域中最主要的学术会议之一，原为单数年召开，自2015年起改为每年召开。
 
 
+# PAMI
+IEEE Transactions on Pattern Analysis and Machine Intelligence
+PAMI是IEEE旗下，模式识别和机器机器学习领域最重要的学术性汇刊之一。在各种统计中，PAMI被认为有着很强的影响因子和很高的排名。
