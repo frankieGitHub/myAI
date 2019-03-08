@@ -50,3 +50,6 @@ int Extractor::extract(const char* blob_name, Mat& feat)
             |---layer->forward_inplace(bottom_top_blob, opt);  
 
 
+
+使用vulkan版本（NCNN废弃opecl分支）
+https://github.com/Tencent/ncnn/wiki/vulkan-notes
