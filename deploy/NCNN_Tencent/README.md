@@ -1,12 +1,5 @@
 
 
-ncnn的Android要使用vulkan编译环境为：
-ndk-r18b, sdk : android-24
-
-https://github.com/Tencent/ncnn/compare/opencl
-可以看看opencl分支的修改内容
-
-
 
 ## 代码结构走读
 
@@ -29,7 +22,7 @@ ex.extract("prob", out);
 参考：https://github.com/Tencent/ncnn/wiki/ncnn-%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8C%97-alexnet
 
 
-
+### extract的调用过程
 其中，关键的函数ex.extract的调用过程如下：  
 int Extractor::extract(const char* blob_name, Mat& feat)  
     |---net->forward_layer  
@@ -48,8 +41,16 @@ int Extractor::extract(const char* blob_name, Mat& feat)
             |---。。。。。。。。<-  
             |---。。。<-  
             |---layer->forward_inplace(bottom_top_blob, opt);  
+这个目录下的net_layer_forward.cpp模拟了ncnn的这个计算过程。
+
+### gpu分支
+使用vulkan版本（NCNN废弃opecl分支）  
+https://github.com/Tencent/ncnn/wiki/vulkan-notes  
+
+https://github.com/Tencent/ncnn/compare/opencl  
+可以看看opencl分支的修改内容  
+
+ncnn的Android要使用vulkan编译环境为：  
+ndk-r18b, sdk : android-24  
 
 
-
-使用vulkan版本（NCNN废弃opecl分支）
-https://github.com/Tencent/ncnn/wiki/vulkan-notes
