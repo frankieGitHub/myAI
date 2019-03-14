@@ -38,4 +38,6 @@ qcom410
 ## i.MX 8M Nano
 恩智浦NXP的这个Nano系列，的GPU支持vulkan
 
-## 
+## Single Board Computer(SBCs)
+国外一个介绍单板计算机的网站
+https://www.explainingcomputers.com/sbc.html
