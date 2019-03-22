@@ -7,3 +7,6 @@ https://github.com/chiphuyen/stanford-tensorflow-tutorials
 ## 2. https://github.com/aymericdamien/TensorFlow-Examples
 
 # tf之上的tf.learn, tf.slim, tf.keras等等。
+
+## 3. Tensorflow2.0实例
+https://github.com/dragen1860/TensorFlow2.0Tutorials  

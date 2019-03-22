@@ -9,6 +9,8 @@ https://hszhao.github.io/projects/pspnet/
 2、Paper: 《Fast Online Object Tracking and Segmentation: A Unifying Approach》  
 github link: https://github.com/foolwood/SiamMask  
 
+3、分割学习三连跳：  
+https://mp.weixin.qq.com/s/xug0xKfc9RgJEUci1a_xog  
 
 ## 人脸
 ### 特征点：
