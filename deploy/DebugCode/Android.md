@@ -49,55 +49,42 @@
 ```
 
 # use arc face 
-``
+```
 IsFaceAlive = mFaceIdApi.somesoftFaceAntiSpoofing(bytes, somesoftFaceBB);
 
-  public boolean somesoftFaceAntiSpoofing(byte[] imageDate, int[] ArcsoftFaceBB)
-      result = mtcnn.LivingBody(imageDate, ArcsoftFaceBB);
+  public boolean somesoftFaceAntiSpoofing(byte[] imageDate, int[] somesoftFaceBB)
+      result = mtcnn.LivingBody(imageDate, somesoftFaceBB);
 
 
 bool MTCNN::LivingBody(unsigned char *img_YUV, int *faceBB){
 //    LOGD("somesoft native enter ");
 
-    ASVLOFFSCREEN previewFrame = {0};
+    AS@#VL#%OF@!FS#@CR#@EEN previewFrame = {0};
 
-    previewFrame.i32Height = 480;
-    previewFrame.i32Width = 640;
+    previewFrame.i3@@2He@@ight = 480;
+    previewFrame.i@@32@@Wi@@dth = 640;
 
-//    previewFrame.pi32Pitch[0] = IMAGE_ALIGN(previewFrame.i32Width, 128);
-//    previewFrame.pi32Pitch[1] = IMAGE_ALIGN(previewFrame.i32Height, 32);
-    previewFrame.pi32Pitch[0] = previewFrame.i32Width;
-    previewFrame.pi32Pitch[1] = previewFrame.i32Width;
+    previewFrame.pi@@32@@Pit@@ch[0] = previewFrame.i@@32@@Wi@@dth;
+    previewFrame.pi@@32@@Pit@@ch[1] = previewFrame.i@@32@@Wi@@dth;
 
-//    LOGD("somesoft native pi32Pitch new: %d ", previewFrame.pi32Pitch[0]);
-//    previewFrame.pi32Pitch[0] = previewFrame.i32Width;
-//    previewFrame.pi32Pitch[1] = previewFrame.i32Width;
-//    previewFrame.u32PixelArrayFormat = ASVL_PAF_YUV;
-    previewFrame.u32PixelArrayFormat = ASVL_PAF_NV21;
-    previewFrame.ppu8Plane[0] = img_YUV;
-    previewFrame.ppu8Plane[1] = img_YUV + 640*480;
+    previewFrame.u32PixelArrayFormat = AS@@VL@@_PA@@F_NV@@21;
+    previewFrame.pp@@u8@@Pl@@ane[0] = img_YUV;
+    previewFrame.pp@@u8@@Pl@@ane[1] = img_YUV + 640*480;
 
-    ARC_FAS_FaceOutput faceParam={0};    ///output from face detetor
-    ARC_FAS_FaceInput faceInParam ={0};  ///input to face anti spoofing
-    MRESULT nRet =ARC_FAS_DetectFace(hHandleLiveness,&previewFrame,&faceParam);
+    AR@@C_FA@@S_Fa@@ceOu@@tput face@@Pa@@ram={0};    ///output from face detetor
+    AR@@C_FA@@S_Fa@@ceIn@@put faceIn@@Pa@@ram ={0};  ///input to face an@@ti
+    MR@@ES@@UL@@T nRet =AR@@C_FA@@S_De@@tec@@tFa@@ce(h@@Han@@dleL@@iven@@ess,&previewFrame,&face@@Pa@@ram);
 
     int biggestFaceID = 0;
-    if(MOK!= nRet ||faceParam.i32FaceNumber ==0)
+    if(MOK!= nRet ||face@@Pa@@ram.i@@32@@Fac@@eNum@@ber ==0)
     {
-//        LOGD("somesoft native face num %d ", faceParam.i32FaceNumber);
-        if(nRet ==ARC_FAS_MERR_MULTIFACE && faceParam.i32FaceNumber>1)
+//        LOGD("somesoft native face num %d ", face@@Pa@@ram.i@@32@@Fac@@eNum@@ber);
+        if(nRet ==AR@@C_F@@AS@@_ME@@RR_MUL@@TI@@FA@@CE && face@@Pa@@ram.i@@32@@Fac@@eNum@@ber>1)
         {
-            // here, set the first face to do anti-spoofing
-            // user can choose the bigger face to do anti-spoofing
-//            LOGD("somesoft native multi face...");
-//            for(int j = 0; j < faceParam.i32FaceNumber; j++) {
-//                LOGD("somesoft native get faceid %d ", faceParam.i32FaceIDArr[j]);
-//
-//            }
 
-            for(int i = 1; i < faceParam.i32FaceNumber; i++) {
-                if((faceParam.stFaceRectArr[i].bottom - faceParam.stFaceRectArr[i].top) -
-                        (faceParam.stFaceRectArr[biggestFaceID].bottom - faceParam.stFaceRectArr[biggestFaceID].top) > 0)
+            for(int i = 1; i < face@@Pa@@ram.i@@32@@Fac@@eNum@@ber; i++) {
+                if((face@@Pa@@ram.st@@Fa@@ceRec@@tArr[i].bottom - face@@Pa@@ram.st@@Fa@@ceRec@@tArr[i].top) -
+                        (face@@Pa@@ram.st@@Fa@@ceRec@@tArr[biggestFaceID].bottom - face@@Pa@@ram.st@@Fa@@ceRec@@tArr[biggestFaceID].top) > 0)
                     biggestFaceID = i;
 //                LOGD("somesoft native biggest face is ID %d ", biggestFaceID);
             }
@@ -113,58 +100,43 @@ bool MTCNN::LivingBody(unsigned char *img_YUV, int *faceBB){
 //        LOGD("somesoft native Detect one face!!!");
     }
 
-    faceInParam.i32FaceNumber = 1;
-    faceInParam.i32FaceIDArr[0] = 0;
-    faceInParam.i32FaceOrientArr[0] = faceParam.i32FaceOrientArr[biggestFaceID];
-//    faceInParam.stFaceRectArr[0].top = faceParam.stFaceRectArr[biggestFaceID].top;
-//    faceInParam.stFaceRectArr[0].left = faceParam.stFaceRectArr[biggestFaceID].left;
-//    faceInParam.stFaceRectArr[0].bottom = faceParam.stFaceRectArr[biggestFaceID].bottom;
-//    faceInParam.stFaceRectArr[0].right = faceParam.stFaceRectArr[biggestFaceID].right;
-    MMemCpy(&faceInParam.stFaceRectArr[0],&faceParam.stFaceRectArr[biggestFaceID],sizeof(MRECT));
+    faceIn@@Pa@@ram.i@@32@@Fac@@eNum@@ber = 1;
+    faceIn@@Pa@@ram.i@@32F@@ace@@IDA@@rr[0] = 0;
+    faceIn@@Pa@@ram.i3@@2Fac@@eOr@@ien@@tA@@rr[0] = face@@Pa@@ram.i3@@2Fac@@eOr@@ien@@tA@@rr[biggestFaceID];
+    MM@@em@@Cpy(&faceIn@@Pa@@ram.st@@Fa@@ceRec@@tArr[0],&face@@Pa@@ram.st@@Fa@@ceRec@@tArr[biggestFaceID],sizeof(MRECT));
 
     ///the SDK may return the out of range value, if the face is on the margin.
-    if(faceInParam.stFaceRectArr[0].left < 0 || faceInParam.stFaceRectArr[0].top < 0)
+    if(faceIn@@Pa@@ram.st@@Fa@@ceRec@@tArr[0].left < 0 || faceIn@@Pa@@ram.st@@Fa@@ceRec@@tArr[0].top < 0)
         return false;
-    else if(faceInParam.stFaceRectArr[0].right > previewFrame.i32Width || faceInParam.stFaceRectArr[0].bottom > previewFrame.i32Height)
+    else if(faceIn@@Pa@@ram.st@@Fa@@ceRec@@tArr[0].right > previewFrame.i@@32@@Wi@@dth || faceIn@@Pa@@ram.st@@Fa@@ceRec@@tArr[0].bottom > previewFrame.i3@@2He@@ight)
         return false;
 
-    faceBB[0] = faceInParam.i32FaceOrientArr[0];
-    faceBB[1] = faceInParam.stFaceRectArr[0].left;
-    faceBB[2] = faceInParam.stFaceRectArr[0].right;
-    faceBB[3] = faceInParam.stFaceRectArr[0].top;
-    faceBB[4] = faceInParam.stFaceRectArr[0].bottom;
+    faceBB[0] = faceIn@@Pa@@ram.i3@@2Fac@@eOr@@ien@@tA@@rr[0];
+    faceBB[1] = faceIn@@Pa@@ram.st@@Fa@@ceRec@@tArr[0].left;
+    faceBB[2] = faceIn@@Pa@@ram.st@@Fa@@ceRec@@tArr[0].right;
+    faceBB[3] = faceIn@@Pa@@ram.st@@Fa@@ceRec@@tArr[0].top;
+    faceBB[4] = faceIn@@Pa@@ram.st@@Fa@@ceRec@@tArr[0].bottom;
 
     if(faceBB[1] < 0 || faceBB[3] < 0) return false;
     else if(faceBB[2] > 640 || faceBB[4] > 480) return false;
-//    LOGD("somesoft native choose face orien: %d", faceInParam.i32FaceOrientArr[0]);
-//    LOGD("somesoft native choose face top: %d", faceInParam.stFaceRectArr[0].top);
-//    LOGD("somesoft native choose face left: %d", faceInParam.stFaceRectArr[0].left);
-//    LOGD("somesoft native choose face bottom: %d", faceInParam.stFaceRectArr[0].bottom);
-//    LOGD("somesoft native choose face right: %d", faceInParam.stFaceRectArr[0].right);
-//    LOGD("somesoft native face width: %d", faceInParam.stFaceRectArr[0].right - faceInParam.stFaceRectArr[0].left);
-//    LOGD("somesoft native face heigh: %d", faceInParam.stFaceRectArr[0].bottom - faceInParam.stFaceRectArr[0].top);
 
-
-    ARC_FAS_AntispoofResult antispoofResult={0};
-    nRet =ARC_FAS_ProcessFaceAntiSpoofing(hHandleLiveness,&previewFrame,&faceInParam,&antispoofResult);
-//    nRet =ARC_FAS_ProcessFaceAntiSpoofing(hHandleLiveness,&previewFrame,(ARC_FAS_FaceInput *)&faceParam,&antispoofResult);
-    if(nRet !=MOK ||antispoofResult.i32FaceNumber ==0)
+    AR@@C_F@@AS_@@An@@tis@@poo@@fRe@@sult ani@@tis@@po@@ofResult={0};
+    nRet =AR@@C_F@@AS_Pro@@ces@@sFa@@ceA@@nti@@Spo@@@of@@ing(h@@Han@@dleL@@iven@@ess,&previewFrame,&faceIn@@Pa@@ram,&ani@@tis@@po@@ofResult);
+    if(nRet !=MOK ||ani@@tis@@po@@ofResult.i@@32@@Fac@@eNum@@ber ==0)
     {
-        LOGD("somesoft native face anti spoof fail!!!");
+        LOGD("somesoft native face an@@ti spo@@of fail!!!");
         return false;
     }
 
-    for(int i=0;i<antispoofResult.i32FaceNumber;i++)
+    for(int i=0;i<ani@@tis@@po@@ofResult.i@@32@@Fac@@eNum@@ber;i++)
     {
-//        string filename = "";
-        //char filename[40] = {0};
-        if(antispoofResult.i32AntispoofResultArr[i] == ARC_FAS_STATE_NOTALIVE)
+        if(ani@@tis@@po@@ofResult.i32@@An@@tispo@@ofR@@esu@@ltArr[i] == AR@@C_F@@AS_S@@TATE@@_NO@@TA@@LI@@VE)
         {
-//            LOGD("somesoft native face not alive!!!");
+//            LOGD("somesoft native face not ali@@ve!!!");
 
-        }else if(antispoofResult.i32AntispoofResultArr[i] == ARC_FAS_STATE_ALIVE)
+        }else if(ani@@tis@@po@@ofResult.i32@@An@@tispo@@ofR@@esu@@ltArr[i] == AR@@C_FA@@S_S@@TAT@@E_AL@@IV@@E)
         {
-//            LOGD("somesoft native face alive!!!");
+//            LOGD("somesoft native face ali@@ve!!!");
             return true;
         }
         else
@@ -176,4 +148,4 @@ bool MTCNN::LivingBody(unsigned char *img_YUV, int *faceBB){
     return false;
 }
          
-``
+```
