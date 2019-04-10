@@ -49,7 +49,7 @@
 ```
 
 # use arc face 
-```
+``
 IsFaceAlive = mFaceIdApi.somesoftFaceAntiSpoofing(bytes, somesoftFaceBB);
 
   public boolean somesoftFaceAntiSpoofing(byte[] imageDate, int[] ArcsoftFaceBB)
@@ -176,4 +176,4 @@ bool MTCNN::LivingBody(unsigned char *img_YUV, int *faceBB){
     return false;
 }
          
-```
+``
