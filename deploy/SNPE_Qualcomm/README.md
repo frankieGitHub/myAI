@@ -1,5 +1,6 @@
 # tensorflow convertor
 ```
+1. tensorflow model convert workflow:
 converters/tensorflow/converter.py
   class DlcConverter
     def convert
@@ -41,5 +42,15 @@ converters/tensorflow/converter.py
       self._set_model_version(model_version)
       self._context.model.set_converter_command(converter_command)
       self._context.model.save(dlc_output_path)
+
+2. how to get tensorflow ops from model?
+converters/tensorflow/converter.py
+class DlcConverter(object):
+  def __init__:
+    self._ops = self._resolve_graph_operations_from_model(model)
+      operations_map = dict()
+      for op in model.session.graph.get_operations():  //can not find the implement
+        operations_map[str(op.name)] = op
+
 ```
 
