@@ -52,6 +52,16 @@ class DlcConverter(object):
       for op in model.session.graph.get_operations():  //can not find the implement
         operations_map[str(op.name)] = op
 
+3. why every specify lay has a sub class Descriptor?
+class SliceLayerResolver(LayerResolver, object):
+    class Descriptor(LayerDescriptor):
+        def __init__(self, name, nodes, axis, split_sizes, split_count):
+            super(SliceLayerResolver.Descriptor, self).__init__('Slice', name, nodes)
+            //这里父类三个公共属性， layer type, layer name, ops
+            self.axis = axis  //具体层的具体属性
+            self.split_sizes = split_sizes
+            self.split_count = split_count
+
 ```
 
 ```
