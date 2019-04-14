@@ -54,3 +54,93 @@ class DlcConverter(object):
 
 ```
 
+```
+|-- converters
+|   |-- __init__.py
+|   |-- code_to_message.py
+|   |-- lower_to_dlc.py
+|   |-- onnx
+|   |   |-- __init__.py
+|   |   |-- data_translations.py
+|   |   |-- math_translations.py
+|   |   |-- messages.py
+|   |   |-- nn_translations.py
+|   |   |-- onnx_to_dlc.py
+|   |   |-- onnx_translations.py
+|   |   |-- rnn_translations.py
+|   |   `-- util.py
+|   |-- op_adapter.py
+|   |-- op_graph.py
+|   |-- tensorflow
+|   |   |-- __init__.py
+|   |   |-- common.py   ===> LayerDescriptor/InputLayerDescriptor/LayerResolver/LayerBuilder
+|   |   |-- converter.py    ==> tf2dlc main workflow
+|   |   |-- graph_matcher.py ==> class GraphMatcher used in diff layers
+|   |   |-- layers
+|   |   |   |-- __init__.py
+|   |   |   |-- add_n.py
+|   |   |   |-- argmax.py
+|   |   |   |-- batchnorm.py
+|   |   |   |-- channel_shuffle.py
+|   |   |   |-- concat.py
+|   |   |   |-- constant.py
+|   |   |   |-- convolution.py
+|   |   |   |-- crop.py
+|   |   |   |-- crop_and_resize.py
+|   |   |   |-- deconvolution.py
+|   |   |   |-- eltwise.py
+|   |   |   |-- eltwise_unary.py
+|   |   |   |-- elu.py
+|   |   |   |-- embedding.py
+|   |   |   |-- extract_glimpse.py
+|   |   |   |-- fake_quant.py
+|   |   |   |-- fill.py
+|   |   |   |-- fullyconnected.py
+|   |   |   |-- ignored_patterns.py
+|   |   |   |-- image_projective_transform.py
+|   |   |   |-- instance_norm.py
+|   |   |   |-- lrn.py
+|   |   |   |-- lstm.py
+|   |   |   |-- non_max_suppression.py
+|   |   |   |-- pad.py
+|   |   |   |-- permute.py
+|   |   |   |-- pixel_shuffle.py
+|   |   |   |-- pooling.py
+|   |   |   |-- pow.py
+|   |   |   |-- prelu.py
+|   |   |   |-- reduction.py
+|   |   |   |-- relu.py
+|   |   |   |-- relu6.py
+|   |   |   |-- relu_min_max.py
+|   |   |   |-- reshape.py
+|   |   |   |-- resize.py
+|   |   |   |-- sigmoid.py
+|   |   |   |-- slice.py
+|   |   |   |-- softmax.py
+|   |   |   |-- ssd.py
+|   |   |   |-- strided_slice.py
+|   |   |   |-- tanh.py
+|   |   |   `-- tile.py
+|   |   |-- loader.py
+|   |   |-- sequences
+|   |   |   |-- __init__.py
+|   |   |   |-- ignored.py
+|   |   |   |-- lstm.py
+|   |   |   `-- ssd.py
+|   |   `-- util.py
+|   `-- translation.py
+`-- snpe
+    |-- __init__.py
+    |-- common
+    |   |-- __init__.py
+    |   |-- snpe_axis_transformer.py
+    |   |-- snpe_converter_utils.py
+    |   |-- snpe_udl_utils.py
+    |   `-- snpe_validation_utils.py
+    |-- snpe_caffe2_to_dlc.py
+    |-- snpe_caffe_to_dlc.py
+    |-- snpe_dlc_utils.py
+    `-- snpe_utils.py
+
+```
+
